@@ -12,6 +12,7 @@ type AuditService interface {
 
 type AuditServer struct {
 	service AuditService
+	audit.AuditServiceServer
 }
 
 func NewAuditServer(service AuditService) *AuditServer {
